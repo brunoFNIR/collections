@@ -27,5 +27,20 @@ public class ExemploOrdenacaoGatos {
         System.out.println("Ordem natural: ");
         Collections.sort(gatos); // o sort direto da List, não usa a interface Comparable, por isso, precisa ser o sort de Collections
         System.out.println(gatos.toString());
+        System.out.println();
+
+        System.out.println("Ordem Idade");
+        gatos.sort(new ComparatorIdade());
+        System.out.println(gatos.toString());
+        System.out.println();
+
+        System.out.println("Ordem Cor");
+        gatos.sort(new ComparatorCor());
+        System.out.println(gatos.toString());
+        System.out.println();
+
+        System.out.println("Ordem Nome/Cor/Idade");
+        gatos.sort(new ComparatorNomeCorIdade());
+        System.out.println(gatos.toString());
     }
 }
